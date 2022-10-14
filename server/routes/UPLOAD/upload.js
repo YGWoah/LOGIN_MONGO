@@ -138,4 +138,12 @@ router.post('/delete', (req, res) => {
   res.send('deleted');
 });
 
+router.get('/chichi', (req, res) => {
+  console.log(req.session.passport.user);
+  User.findOne((arr) => {
+    console.log(arr);
+  });
+  res.send('Succes');
+});
+
 module.exports = router;
